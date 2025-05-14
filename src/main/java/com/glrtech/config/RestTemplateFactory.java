@@ -6,7 +6,7 @@ import org.springframework.web.client.RestTemplate;
 public class RestTemplateFactory {
 	public static RestTemplate createWithTimeout() {
 		HttpComponentsClientHttpRequestFactory factory = new HttpComponentsClientHttpRequestFactory();
-		factory.setConnectTimeout(10000); // 10 segundos
+		factory.setConnectTimeout(10000); // 10 segundos de Timeout
 		factory.setReadTimeout(5000);
 		return new RestTemplate(factory);
 	}
